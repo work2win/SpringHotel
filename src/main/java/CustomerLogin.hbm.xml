@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+"hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name = "com.springmvc.dao.CustomerLogin" table = "USER">
+	<id name = "id" type = "int" column = "id">
+         <generator class="native"/>
+    </id>
+    <property name = "uname" column = "username" type = "string"/>
+    <property name = "pwd" column = "password" type = "string"/>
+	</class>
+	<class name = "simu.Boat" table = "BOAT">
+	<id name = "id" type = "int" column = "idboat">
+         <generator class="native"/>
+    </id>
+    <property name = "boatType" column = "boattype" type = "string"/>
+    <property name = "boatCost" column = "boatcost" type = "int"/>
+	</class>
+	
+	<class name = "simu.Room" table = "ROOM">
+	<id name = "roomnum" type = "int" column = "roomid">
+         <generator class="native"/>
+    </id>
+    <property name = "typeOfRoom" column = "roomtype" type = "string"/>
+    <property name = "NumofBeds" column = "bednums" type = "int"/>
+    <property name = "roomcost" column = "roomcost" type = "int"/>
+    <property name = "roomstatus" column = "roomstatus" type = "boolean"/>
+	</class>
+</hibernate-mapping>
